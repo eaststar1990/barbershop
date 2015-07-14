@@ -13,9 +13,26 @@ body{
 	overflow-y:scroll;
 }
 
+/* *
+* Center layout
+*/
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
+
+/* *
+* Background of inner pages
+*/
+
 .inner-page{
 	background: black url('../img/inner-background.jpg')repeat;
 }
+
+/* *
+* Text styles
+*/
 
 h1{
 	margin: 0;
@@ -35,6 +52,10 @@ p{
 	margin: 1.78em 0;
 }
 
+/* *
+* Floated blocks classes
+*/
+
 .left{
 	float:left;
 }
@@ -43,16 +64,12 @@ p{
 	float:right;
 }
 
-.container {
-	width: 940px;
-	margin: 0 auto;
-}
-
 .clearfix:after{
 	content:"";
 	display:table;
 	clear:both;
 }
+
 
 input{	
     border:2px solid black;	
@@ -70,6 +87,19 @@ input[type=submit]{
 }
 
 
+::-webkit-input-placeholder {color:black;font-family: "PT Sans Narrow";font-size: 14px;
+	font-weight: bold;}
+::-moz-placeholder          {color:black;font-family: "PT Sans Narrow";font-size: 14px;
+	font-weight: bold;}/* Firefox 19+ */
+:-moz-placeholder           {color:black;font-family: "PT Sans Narrow";font-size: 14px;
+	font-weight: bold;}/* Firefox 18- */
+:-ms-input-placeholder      {color:black;font-family: "PT Sans Narrow";font-size: 14px;
+	font-weight: bold;}
+
+/* *
+* Login pop-up styles
+*/
+
 .login-popup{
 	position: absolute;
 	top: 130px;
@@ -81,11 +111,14 @@ input[type=submit]{
 	z-index: 100;
 }
 
+/* form */
+
 .login-popup-form input{
 	width: 236px;
-	padding: 15px;
 	margin-bottom:10px;
 }
+
+/* form field's icons */
 
 .login-popup-form .login{
 	background: url('../img/user.png') no-repeat 95% 50%;
@@ -95,16 +128,22 @@ input[type=submit]{
 	background: url('../img/password.png') no-repeat 95% 50%;
 }
 
+/* enter button */
+
 .login-popup-form input[type="submit"]{
 	width: 100%;
 	padding: 15px;
 	margin: 10px 0;
 }
 
+/*forgot password */
+
 .login-popup-form a{
 	float: right;
 	color:black;
 }
+
+/* "remember me" check-box */
 
 .login-popup-form .remember{
 	width: auto;
@@ -153,6 +192,9 @@ header a:active{
 .top-menu li a:hover{
 	background: #242424;
 }
+
+/* underline active link*/
+
 .top-menu li .active{
 	box-shadow: 0 23px 0 -20px white;
 }
@@ -169,6 +211,8 @@ header a:active{
 	padding-left: 35px;
 	text-decoration: none;
 }
+
+/* account button style*/
 
 .account-menu-enter:before{
 	position: absolute;
@@ -191,6 +235,7 @@ header a:active{
 /*///////////////////////// 
      Main page styles///// 
 ////////////////////////*/
+
 .logo{
 	display:block;
 	margin: 0 auto;
@@ -226,6 +271,8 @@ header a:active{
 	margin-bottom: 80px;
 }
 
+/* rombus after features title */
+
 .features-title:after{
 	position:absolute;
 	content:'';
@@ -237,7 +284,7 @@ header a:active{
 	background: url('../img/icon-rhombus.png') no-repeat 0 0;
 }
 
-/* Content blocks styles */
+/* Content blocks styles. Main page*/
 
 .content{
 	width: auto;
@@ -280,20 +327,11 @@ header a:active{
 	margin-bottom: 30px;
 }
 
-.content-item p{
-	padding:0;
-	
-}
-
-.content-item p i{
+.content-item p .date{
 	font-family: "Georgia"; 
 	font-weight: normal;
 	text-transform: lowercase;
 	
-}
-
-.content-item-date{	
-	font-style: italic;
 }
 
 .content-item-gallery{
@@ -308,10 +346,7 @@ header a:active{
 	padding: 10px 0;
 	color: white;
 	background: black;
-	font-weight: bold;
-	line-height: 24px;
 	text-decoration: none;
-	text-transform: uppercase;
 	text-align: center;
 }
 
@@ -341,14 +376,6 @@ header a:active{
 	width: 300px;
 }
 
-::-webkit-input-placeholder {color:black;font-family: "PT Sans Narrow";font-size: 14px;
-	font-weight: bold;}
-::-moz-placeholder          {color:black;font-family: "PT Sans Narrow";font-size: 14px;
-	font-weight: bold;}/* Firefox 19+ */
-:-moz-placeholder           {color:black;font-family: "PT Sans Narrow";font-size: 14px;
-	font-weight: bold;}/* Firefox 18- */
-:-ms-input-placeholder      {color:black;font-family: "PT Sans Narrow";font-size: 14px;
-	font-weight: bold;}
 /*////////////////////////// 
  End Main page styles///// 
 //////////////////////////*/
@@ -363,7 +390,7 @@ header a:active{
 }
 
 .price-title h1{
-position:relative;
+	position:relative;
 	display: inline;
 	padding: 0 20px;
 	margin: 0;
@@ -403,7 +430,6 @@ position:relative;
 
 .price-costs-table{
 	width: 100%;
-	
 }
 
 .price-costs-table th{
@@ -424,7 +450,8 @@ position:relative;
 	margin-bottom: 70px;
 }
 
-.about-item p{	margin-top: 0;
+.about-item p{
+	margin-top: 0;
 	padding-right: 80px;
 }
 
@@ -441,7 +468,7 @@ position:relative;
 }
 
 .shop-filter h2{
-	margin-top: 10px;
+	margin-top: 0.3em;
 }
 
 .shop-filter form{
