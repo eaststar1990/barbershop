@@ -9,6 +9,20 @@
 	<link href='css/style.css' rel='stylesheet' type='text/css'>
 </head>
 <body class="inner-page">
+
+<div class="login-popup">
+	<div class="login-popup-close"></div>
+	<h1>Личный кабинет</h1>
+	<p>Введите, пожалуйста, свой логин и пароль! <br>Если вы забыли свой пароль</p>
+	<form class="login-popup-form" action="/auth" method="post">
+		<input type="text" class="login" placeholder="Логин" required>
+		<input type="password" class="password" placeholder="Пароль" required>
+		<label><input type="checkbox" class="remember">Запомнить меня</label>
+		<a href="">Забыл пароль</a>
+		<input type="submit" class="submit" value="Войти">
+	</form>
+
+</div>	
 <header>
 	<div class="container clearfix">
 		<nav class="top-menu">
@@ -113,5 +127,20 @@
 		
 	</div>
 </footer>
+	<script>
+		  var link = document.querySelector(".account-menu-enter");
+		  var popup = document.querySelector(".login-popup");
+		  var close = document.querySelector(".login-popup-close");
+
+		  link.addEventListener("click", function(event) {
+			event.preventDefault();
+			popup.classList.add("login-popup-show");
+		  });
+		  
+		  close.addEventListener("click", function(event) {
+			event.preventDefault();
+			popup.classList.remove("login-popup-show");
+		  });
+	</script>
 </body>
 </html>

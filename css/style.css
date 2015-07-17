@@ -105,12 +105,28 @@ input[type=submit]{
 	top: 130px;
 	left: 50%;
 	width: 270px;
-	background: black url('../img/inner-background.jpg')repeat;
+	background: black url('../img/inner-background.jpg') repeat;
 	padding: 50px 80px;
 	margin-left: -215px;
 	z-index: 100;
+	display: none;
 }
 
+.login-popup-close{
+  position: absolute;
+  top: 0;
+  right: -50px;
+  z-index:100;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: url("../img/close.png") no-repeat center;
+  background-opacity: 0.5;
+}
+
+.login-popup-show{
+	display: block;
+}
 /* form */
 
 .login-popup-form input{
