@@ -186,8 +186,8 @@ header a:active{
 	color: white;
 }
 
-
 .top-menu ul{
+
 	float: left;
 	width: 780px;
 	margin: 0;
@@ -197,6 +197,7 @@ header a:active{
 
 .top-menu li{
 	display: inline-block;
+		position: relative;
 }
 
 .top-menu li a{
@@ -209,6 +210,16 @@ header a:active{
 	background: #242424;
 }
 
+.top-menu .available:before{
+	content:"";
+	display: block;
+	position: absolute;
+	top:0;
+	right:0;
+	width: 40px;
+	height: 40px;
+	background: url('../img/avalible.png') no-repeat;
+}
 /* underline active link*/
 
 .top-menu li .active{
